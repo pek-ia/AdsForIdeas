@@ -11,8 +11,11 @@ PRIMARY KEY(AdId)
 );
 
 
-select * from advertisements;
+-- 
+-- select * from advertisements;
+-- 
 
+insert into advertisements values (1, "BIG ideas!", "FREEIDEAS", 30.0);
 insert into advertisements values (2, "Free ideas!", "FREEIDEAS", 30.0);
 insert into advertisements values (3, "More ideas!", "FREEIDEAS", 30.0);
 insert into advertisements values (4, "YOUR ideas!", "FREEIDEAS", 30.0);
@@ -35,7 +38,8 @@ select * from ideas;
 insert into ideas (idea)
 values ("I made 10 million bucks on ChatGPT in one hour!!!!!");
 
-DROP TABLE ideas;
+-- don't drop that table!
+-- DROP TABLE ideas;
 
 CREATE TABLE ads_for_ideas (
 id int NOT NULL AUTO_INCREMENT,
@@ -44,13 +48,15 @@ AdId INT NOT NULL,
 PRIMARY KEY (id)
 );
 
-select * from ideas;
+-- 
+-- select * from ideas;
+--
 
 insert into ads_for_ideas (idea_id, AdId)
 values (1,2);
-
-select * from ads_for_ideas;
-
+--
+-- select * from ads_for_ideas;
+--
 SELECT 
     i.idea, ads.MagicCode
 FROM
